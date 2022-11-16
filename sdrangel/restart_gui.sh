@@ -5,5 +5,5 @@ fi
 if [ -z ${APIPORT+x} ]; then # take 8091 port for API if not specified
     APIPORT=8091
 fi
-export LD_LIBRARY_PATH=/opt/install/libsdrplay/lib:/opt/install/xtrx-images/lib
+export LD_LIBRARY_PATH=/opt/install/libsdrplay/lib:/opt/install/xtrx-images/lib:/opt/install/uhd/lib:/opt/install/librtlsdr/lib:/opt/install/libiio/lib
 /opt/install/sdrangel/bin/sdrangel -geometry 600x400+50+50 -a ${IPADDR} -p ${APIPORT} -w ~/.config/sdrangel/${FFTWFILE}
